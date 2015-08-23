@@ -1,0 +1,50 @@
+# Docker Quickstart Guide (MAC)
+### Installing the Docker Toolbox
+1. Go to https://www.docker.com/toolbox 
+1. Run the Docker Toolbox installer, entering your password when prompted.
+1. If you already have Boot2Docker installed (now deprecated): You will be asked if you want to migrate your previous vm, choose "migrate".
+
+### Running Docker containers 
+1. There are two ways you can start running containers with docker:
+	1. From the Docker Quickstart Terminal
+		* Find "Docker Quickstart Terminal" from your Application folder or Launchpad, double click to launch.
+		* A terminal window will open. This is where you will be able to issue docker commands.
+		* Verify that your setup succeeded by running `docker run hello-world` (requires an internet connection)
+		* Docker will download a new image onto your computer and run it, producing the following output:
+
+		```
+		$ docker run hello-world
+		Unable to find image 'hello-world:latest' locally
+		511136ea3c5a: Pull complete
+		31cbccb51277: Pull complete
+		e45a5af57b00: Pull complete
+		hello-world:latest: The image you are pulling has been verified.
+		Important: image verification is a tech preview feature and should not be
+		relied on to provide security.
+		Status: Downloaded newer image for hello-world:latest
+		Hello from Docker.
+		This message shows that your installation appears to be working correctly.
+
+
+		To generate this message, Docker took the following steps:
+		1. The Docker client contacted the Docker daemon.
+		2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+		   (Assuming it was not already locally available.)
+		3. The Docker daemon created a new container from that image which runs the
+		   executable that produces the output you are currently reading.
+		4. The Docker daemon streamed that output to the Docker client, which sent it
+		   to your terminal.
+
+
+		To try something more ambitious, you can run an Ubuntu container with:
+		$ docker run -it ubuntu bash
+
+
+		For more examples and ideas, visit:
+		http://docs.docker.com/userguide/
+		```
+
+1. If you prefer to use a graphic user interface instead, you may use Kitematic (included in the Docker Toolbox)
+	1. To use Kitematic, you will need to create a Docker Hub account, you may do so at https://hub.docker.com
+	1. Search for "hello-world" on the search bar, click the create button of the "official:hello-world" repository. The repository will be downloaded.
+	1. Again, we can verify that our setup is successful by observing the output of your container logs.
