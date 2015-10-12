@@ -13,4 +13,4 @@ IS605 Cloud Computing and Big Data Analytics 2015
 
 `sudo docker pull waituck/custom_nb`
 
-`sudo docker run --net=host -d -e CONFIGPROXY_AUTH_TOKEN=$TOKEN -v /var/run/docker.sock:/docker.sock jupyter/tmpnb python orchestrate.py --image='waituck/custom_nb' --pool_size=10 --command="ipython notebook --NotebookApp.base_url={base_path} --ip=0.0.0.0 --port {port}`
+`sudo docker run --net=host -d -e CONFIGPROXY_AUTH_TOKEN=$TOKEN -v /var/run/docker.sock:/docker.sock -v /var/run/docker.sock:/docker.sock jupyter/tmpnb python orchestrate.py --image='waituck/custom_nb' --pool_size=10 --command="ipython notebook --NotebookApp.base_url={base_path} --ip=0.0.0.0 --port {port}"`
